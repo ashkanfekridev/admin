@@ -1,0 +1,135 @@
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background: #edf1f5;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+
+/*start sidebar*/
+#right
+{
+	width: 240px;
+	min-height: 100vh;
+	background: #fff;
+	box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+	display: block;
+/*	float: right;*/
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+header#right-header
+{
+	padding: 4px;
+	margin-bottom: 24px;
+}
+
+
+/*start-menu*/
+ul#right-main
+{
+	list-style: none;
+}
+
+ul#right-main>li>a
+{
+	border-right: 3px solid transperant;
+}
+
+ul#right-main>li>a.active
+{
+	border-right: 3px solid #41b3f9;
+}
+
+ul#right-main li a
+{
+	display: block;
+	padding: 10px 20px;
+	color: #54667a;
+}
+
+ul#right-main li a:hover
+{
+	background: #efefef;
+}
+
+/*end menu*/
+
+/*end sidebar*/
+
+
+
+/*start left*/
+#left
+{
+	margin-right: 240px;
+	min-height: 100vh;
+}
+/*start header*/
+header#header
+{
+	padding: 8px 15px;
+	background: #2f323e;	
+}
+
+.profile-img
+{
+	float: left;
+}
+
+/*end header*/
+
+
+main#main
+{
+	padding: 0 15px;
+}
+
+.white-box
+{
+	background: #fff;
+	padding: 25px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+#ct-visits
+{
+	position: relative;
+}
+
+.chartist-tooltip
+{
+	display: none;
+	position: absolute;
+}
+
+.chartist-tooltip.tooltip-show
+{
+	display: block;
+	position: absolute;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.chartist-tooltip.tooltip-show::after
+{
+	content: 'هزار بار';
+	padding: 4px;
+	color: #606060;
+}
+
+

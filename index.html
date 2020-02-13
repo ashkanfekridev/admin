@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>داشبورد</title>
+	<link rel="stylesheet" href="plagins/chartist-js/dist/chartist.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="wapper">
+		<div id="right">
+			<header id="right-header" class="text-center">
+				<br>
+				<br>
+				<h1>روبیک</h1>
+				<br>
+				<br>
+			</header>
+			<ul id="right-main">
+				<li><a href="#" class="active">داشبورد</a></li>
+				<li><a href="#">المان های صفحه</a></li>
+				<li><a href="#">صفحات</a></li>
+			</ul>
+		</div>
+		<div id="left">
+			<header id="header">
+				<div class="row">
+					<div class="col-4">
+						<p class="p-t-4 text-white">پنل مدیریت  روبیک</p>
+					</div>
+					<div class="text-white col-auto mr-auto">
+						<div class="profile-img">
+							<span>اشکان</span>
+							<img class="img-circle" src="img/u1.png" alt="user image" width="36">
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="container-fluid">
+				<div class="row p-v-10 bg-white title">
+					<div class="col-4 p-t-10">
+						<span><a href="#">داشبورد</a>/خانه</span>
+					</div>
+					<div class="col-4 text-center">
+						<h4><b>داشبورد</b></h4>
+					</div>
+					<div class="col-4 text-left">
+						<a href="#" class="btn">مشاهده سایت</a>
+					</div>
+				</div>
+			</div>
+			<main id="main">
+				<div class="container-fluid">
+					<div class="row m-t-20">
+						<div class="col-4">
+							<div class="white-box text-center">
+								<h3 class="box-tetle">درآمد این ماه</h3>
+									<p class="p-t-10">24,000,000 تومان</p>
+							</div>	
+						</div>
+
+						<div class="col-4">
+							<div class="white-box text-center">
+								<h3 class="box-tetle">تعداد بلیت های فروخته شده</h3>
+								<p class="p-t-10">10</p>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="white-box text-center">
+								<h3 class="box-tetle">تعداد کل رویداد ها</h3>
+								<p class="p-t-10">4</p>
+							</div>
+						</div>
+
+						<div class="col-12">
+
+							<div class="white-box">
+								<h3 class="box-tetle b-b p-b-10 pull-in text-center">بیشترین بازدید از این سیستم عامل ها صورت گرفته است</h3>
+								<ul class="block list-inline">
+									<li><p style="color: #f05b4f;">ویندوز</p></li>
+									<li><p style="color: #f4c63d;">اندروید</p></li>
+									<li><p style="color: #d70206;">آی اواس</p></li>
+								</ul>
+								<div id="ct-visits" style="height: 405px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="plagins/chartist-js/dist/chartist.min.js"></script>
+	<script type="text/javascript" src="plagins/chartist-js/dist/chartist-init.js"></script>
+	<script type="text/javascript" src="plagins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+
+	<script type="text/javascript">
+		     //ct-visits
+     new Chartist.Line('#ct-visits', {
+		         labels: ['1397/1/1', '1397/1/2', '1397/1/3', '1397/1/4', '1397/1/5', '1397/1/6', '1397/1/7'],
+		         series: [
+		    [3,5, 2, 7, 4, 5, 3, 5]
+		    , [3,6, 8, 1, 8, 7, 9, 6]
+		    , [2,4, 5, 2, 6, 2, 5, 9]
+		  ]
+		     }, {
+		         top: 0,
+		         low: 1,
+		         showPoint: true,
+		         fullWidth: false,
+		         plugins: [
+		    Chartist.plugins.tooltip()
+		  ],
+		         axisY: {
+		             labelInterpolationFnc: function (value) {
+		                 return (value / 1) + 'هزار';
+		             }
+		         },
+		         showArea: true
+		     });
+	</script>
+</body>
+</html>
